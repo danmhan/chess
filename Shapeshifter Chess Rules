@@ -1,0 +1,5 @@
+Shapeshifter Chess:
+
+	Standard pawns are replaced with shapeshifters.
+	Shapeshifters become the piece that they capture.
+	If a King captures a shapeshifter, all shapeshifters lose the ability to shapeshift and stay as the pieces they are.
