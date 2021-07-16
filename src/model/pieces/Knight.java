@@ -4,14 +4,14 @@ import model.Game.Coordinate;
 import model.Game.PieceType;
 import model.Game.Player;
 
-public class King extends Piece {
+public class Knight extends Piece {
     /**
      * The constructor for an abstract Chess Piece
      *
      * @param player   The player who controls this piece.
      * @param position
      */
-    public King(Player player, Coordinate position) {
+    public Knight(Player player, Coordinate position) {
         super(player, position);
     }
 

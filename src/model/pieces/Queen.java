@@ -7,7 +7,7 @@ import model.Game.Player;
 public class Queen extends Piece {
     PieceType type;
 
-    protected Queen(Player player, Coordinate position) {
+    public Queen(Player player, Coordinate position) {
         super(player, position);
         type = PieceType.QUEEN;
     }

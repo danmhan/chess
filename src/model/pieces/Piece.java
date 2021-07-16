@@ -18,7 +18,7 @@ public abstract class Piece {
      * The constructor for an abstract Chess Piece
      * @param player    The player who controls this piece.
      */
-    protected Piece(Player player, Coordinate position) {
+    public Piece(Player player, Coordinate position) {
         this.player = player;
         this.position = position;
     }

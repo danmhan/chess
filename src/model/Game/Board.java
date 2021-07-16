@@ -5,6 +5,10 @@ import java.awt.*;
 import java.util.*;
 
 public class Board {
+    /**
+     * Array of arrays that represents the board. Squares[file][rank]. ex. Squares['a'][4]
+     */
+    // Idea: Tile[] Squares where Tile = { Coordinate, Piece } so it's easier to know if a tile is empty or not.
     public static Piece[][] Squares;
     public Color turn = Color.WHITE;
     public Map<Character, Boolean> canCastle = new HashMap<>();
@@ -44,22 +48,71 @@ public class Board {
         this.setBoardToFen(fen);
     }
 
+    /**
+     * Method to set up the board according to the FEN string
+     * @param fen   A FEN string
+     */
     public void setBoardToFen(String fen) {
-        String[] lst = fen.split("/");
-        String details = lst[7].split(" ", 2)[1];
+        // Split FEN string by rank.
+        String[] ranks = fen.split("/");
+        // Parse the details separately from ranks.
+        String details = ranks[7].split(" ", 2)[1];
         this.setBoardDetails(details);
-        lst[7] = lst[7].split(" ", 2)[0];
+        ranks[7] = ranks[7].split(" ", 2)[0];
+
+        // Populate the board by rank.
         for (int rank = 0; rank < 8; rank++) {
             int file = 0;
             int strPos = 0;
-            while (strPos < 8) {
-                int letter = lst[7 - rank].charAt(strPos);
+            while (strPos < ranks[7 - rank].length()) {
+                // Start at end of fen string to get the ranks in increasing order.
+                int letter = ranks[7 - rank].charAt(strPos);
+
+                // Place the piece on its tile. For numbers, skip over that many tiles.
                 switch(letter) {
                     case 'K':
-                        Squares[][] = new King()
+                        Squares[file][rank] = new King(new Player(Color.WHITE), new Coordinate(
+                            (char) file, rank));
+                    case 'Q':
+                        Squares[file][rank] = new Queen(new Player(Color.WHITE), new Coordinate(
+                            (char) file, rank));
+                    case 'R':
+                        Squares[file][rank] = new Rook(new Player(Color.WHITE), new Coordinate(
+                            (char) file, rank));
+                    case 'B':
+                        Squares[file][rank] = new Bishop(new Player(Color.WHITE), new Coordinate(
+                            (char) file, rank));
+                    case 'N':
+                        Squares[file][rank] = new Knight(new Player(Color.WHITE), new Coordinate(
+                            (char) file, rank));
+                    case 'P':
+                        Squares[file][rank] = new Pawn(new Player(Color.WHITE), new Coordinate(
+                            (char) file, rank));
+                    case 'k':
+                        Squares[file][rank] = new King(new Player(Color.BLACK), new Coordinate(
+                            (char) file, rank));
+                    case 'q':
+                        Squares[file][rank] = new Queen(new Player(Color.BLACK), new Coordinate(
+                            (char) file, rank));
+                    case 'r':
+                        Squares[file][rank] = new Rook(new Player(Color.BLACK), new Coordinate(
+                            (char) file, rank));
+                    case 'b':
+                        Squares[file][rank] = new Bishop(new Player(Color.BLACK), new Coordinate(
+                            (char) file, rank));
+                    case 'n':
+                        Squares[file][rank] = new Knight(new Player(Color.BLACK), new Coordinate(
+                            (char) file, rank));
+                    case 'p':
+                        Squares[file][rank] = new Pawn(new Player(Color.BLACK), new Coordinate(
+                            (char) file, rank));
+                    default:
+                        // Possible bug: null object on empty tiles.
+                        file += letter;
                 }
+                strPos += 1;
+                file += 1;
             }
-
         }
         // Error handling
 
