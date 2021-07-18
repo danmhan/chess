@@ -1,8 +1,12 @@
 package model.pieces;
 
 import model.Game.Coordinate;
+import model.Game.Move;
 import model.Game.PieceType;
 import model.Game.Player;
+import model.Game.board.Board;
+
+import java.util.List;
 
 public class Knight extends Piece {
     /**
@@ -17,6 +21,12 @@ public class Knight extends Piece {
 
     @Override
     public PieceType getType() {
+        return null;
+    }
+
+    @Override
+    public List<Move> calculateLegalMoves(Board board) {
+
         return null;
     }
 

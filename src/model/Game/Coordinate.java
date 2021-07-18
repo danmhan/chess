@@ -15,13 +15,10 @@ public class Coordinate {
 
     public int getFile() { return file; }
     public int getRank() { return rank; }
-    public String getPosition() {
-        StringBuilder position = new StringBuilder(Character.toString(file));
-        System.out.println("String builder");
-        System.out.println(file);
-        System.out.println(rank);
-        System.out.println(position.toString());
-        position.append(rank);
-        return position.toString();
-    }
+//    public String getPosition() {
+//        StringBuilder position = new StringBuilder(Character.toString(file));
+//        position.append(rank);
+//        return position.toString();
+//    }
+
 }

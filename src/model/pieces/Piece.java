@@ -1,9 +1,9 @@
 package model.pieces;
 
-import model.Game.Color;
-import model.Game.Coordinate;
-import model.Game.PieceType;
-import model.Game.Player;
+import model.Game.*;
+import model.Game.board.Board;
+
+import java.util.List;
 
 /**
  * @author danmhan
@@ -11,8 +11,8 @@ import model.Game.Player;
  */
 public abstract class Piece {
 
-    private Player player;
-    private Coordinate position;
+    protected Player player;
+    protected Coordinate position;
 
     /**
      * The constructor for an abstract Chess Piece
@@ -38,6 +38,7 @@ public abstract class Piece {
      */
     public Coordinate getCoordinate() { return position; }
 
+    public abstract List<Move> calculateLegalMoves(final Board board);
     public abstract boolean isValidMove();
 
     public abstract Coordinate[] drawPath();
