@@ -11,7 +11,7 @@ import java.util.List;
 public class Queen extends Piece {
     PieceType type;
 
-    public Queen(Player player, Coordinate position) {
+    public Queen(Player player, int position) {
         super(player, position);
         type = PieceType.QUEEN;
     }
@@ -27,16 +27,4 @@ public class Queen extends Piece {
         return false;
     }
 
-    @Override
-    public Coordinate[] drawPath() {
-        return new Coordinate[0];
-    }
-
-    public boolean isValidMove(Coordinate position) {
-        return true;
-    }
-
-    public Coordinate[] drawPath(Coordinate start) {
-        return null;
-    }
 }

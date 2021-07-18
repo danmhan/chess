@@ -9,13 +9,17 @@ import model.Game.board.Board;
 import java.util.List;
 
 public class Knight extends Piece {
+
+    private final static int[] CANDIDATE_MOVE_COORDINATES = {-17, -15, -10, -6, 6, 10, 15, 17};
+
     /**
      * The constructor for an abstract Chess Piece
      *
-     * @param player   The player who controls this piece.
-     * @param position
+     * @param player    The player who controls this piece.
+     * @param position  The position on the Board
      */
-    public Knight(Player player, Coordinate position) {
+
+    public Knight(Player player, int position) {
         super(player, position);
     }
 
@@ -35,8 +39,4 @@ public class Knight extends Piece {
         return false;
     }
 
-    @Override
-    public Coordinate[] drawPath() {
-        return new Coordinate[0];
-    }
 }

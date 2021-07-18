@@ -17,4 +17,13 @@ public class Square {
         this.isOccupied = true;
     }
 
+    public void setPieceOnSquare(Piece pieceOnSquare) {
+        this.pieceOnSquare = pieceOnSquare;
+        this.isOccupied = true;
+    }
+
+    public void removePieceOnSquare() {
+        this.pieceOnSquare = null;
+        this.isOccupied = false;
+    }
 }

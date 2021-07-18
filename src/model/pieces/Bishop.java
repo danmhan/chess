@@ -12,10 +12,10 @@ public class Bishop extends Piece {
     /**
      * The constructor for an abstract Chess Piece
      *
-     * @param player   The player who controls this piece.
-     * @param position
+     * @param player    The player who controls this piece.
+     * @param position  The position on the Board
      */
-    public Bishop(Player player, Coordinate position) {
+    public Bishop(Player player, int position) {
         super(player, position);
     }
 
@@ -34,8 +34,4 @@ public class Bishop extends Piece {
         return false;
     }
 
-    @Override
-    public Coordinate[] drawPath() {
-        return new Coordinate[0];
-    }
 }
