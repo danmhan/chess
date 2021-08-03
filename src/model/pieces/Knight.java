@@ -30,7 +30,7 @@ public class Knight extends Piece {
 
     @Override
     public PieceType getType() {
-        return null;
+        return PieceType.KNIGHT;
     }
 
     @Override

@@ -23,7 +23,7 @@ public class Rook extends Piece {
 
     @Override
     public PieceType getType() {
-        return null;
+        return PieceType.ROOK;
     }
 
     @Override
