@@ -9,6 +9,9 @@ import model.Game.board.Board;
 import java.util.List;
 
 public class Pawn extends Piece {
+
+    private final static int[] CANDIDATE_MOVE_COORDINATES = {-16, -9, -8, -7, 7, 8, 9, 16};
+
     /**
      * The constructor for an abstract Chess Piece
      *
@@ -27,11 +30,6 @@ public class Pawn extends Piece {
     @Override
     public List<Move> calculateLegalMoves(Board board) {
         return null;
-    }
-
-    @Override
-    public boolean isValidMove() {
-        return false;
     }
 
 }

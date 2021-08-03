@@ -9,6 +9,9 @@ import model.Game.board.Board;
 import java.util.List;
 
 public class Queen extends Piece {
+
+    private final static int[] CANDIDATE_MOVE_COORDINATES = {};
+
     PieceType type;
 
     public Queen(Player player, int position) {
@@ -22,9 +25,5 @@ public class Queen extends Piece {
         return null;
     }
 
-    @Override
-    public boolean isValidMove() {
-        return false;
-    }
 
 }

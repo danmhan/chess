@@ -4,8 +4,8 @@ import model.pieces.Piece;
 
 public class Square {
 
-    public Piece pieceOnSquare;
-    public boolean isOccupied;
+    private Piece pieceOnSquare;
+    private boolean isOccupied;
 
     Square() {
         this.pieceOnSquare = null;
@@ -26,4 +26,13 @@ public class Square {
         this.pieceOnSquare = null;
         this.isOccupied = false;
     }
+
+    public Piece getPiece() {
+        return this.pieceOnSquare;
+    }
+
+    public boolean isOccupied() {
+        return this.isOccupied;
+    }
+
 }

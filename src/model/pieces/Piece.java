@@ -39,6 +39,8 @@ public abstract class Piece {
     public int getPosition() { return position; }
 
     public abstract List<Move> calculateLegalMoves(final Board board);
-    public abstract boolean isValidMove();
+//    protected boolean coordinateInBounds(int coordinate) {
+//        return coordinate >= 0 && coordinate < 64;
+//    }
 
 }

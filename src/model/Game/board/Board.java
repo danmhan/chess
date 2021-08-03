@@ -54,6 +54,10 @@ public class Board {
         this.setBoardToFen(fen);
     }
 
+    public Square getSquare(int position) {
+        return Squares[position];
+    }
+
     /**
      * Method to set up the board according to the FEN string
      * @param fen   A FEN string
@@ -101,7 +105,6 @@ public class Board {
                     case 'p':
                         Squares[8 * rank + file].setPieceOnSquare(new Pawn(new Player(model.Game.Color.BLACK), 8 * rank + file));
                     default:
-                        // Possible bug: null object on empty tiles. Resolved after changing Board to Square[].
                         file += letter;
                 }
                 strPos += 1;

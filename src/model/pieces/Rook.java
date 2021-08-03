@@ -9,6 +9,9 @@ import model.Game.board.Board;
 import java.util.List;
 
 public class Rook extends Piece {
+
+    private final static int[] CANDIDATE_MOVE_COORDINATES = {};
+
     /**
      * The constructor for an abstract Chess Piece
      *  @param player   The player who controls this piece.
@@ -26,11 +29,6 @@ public class Rook extends Piece {
     @Override
     public List<Move> calculateLegalMoves(Board board) {
         return null;
-    }
-
-    @Override
-    public boolean isValidMove() {
-        return false;
     }
 
 }
