@@ -13,11 +13,8 @@ public class Queen extends Piece {
 
     private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = {-9, -8, -7, -1, 1, 7, 8, 9};
 
-    private Color pieceColor;
-
     public Queen(Player player, int position) {
         super(player, position);
-        this.pieceColor = player.getColor();
     }
     public PieceType getType() { return PieceType.QUEEN;}
 

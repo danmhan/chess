@@ -12,7 +12,6 @@ import java.util.List;
 public class Bishop extends Piece {
 
     private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = {-9, -7, 7, 9};
-    public Color pieceColor;
     /**
      * The constructor for an abstract Chess Piece
      *
@@ -21,7 +20,6 @@ public class Bishop extends Piece {
      */
     public Bishop(Player player, int position) {
         super(player, position);
-        this.pieceColor = player.getColor();
     }
 
     @Override

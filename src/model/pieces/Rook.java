@@ -12,7 +12,6 @@ import java.util.List;
 public class Rook extends Piece {
 
     private final static int[] CANDIDATE_MOVE_VECTOR_COORDINATES = {-8, -1, 1, 8};
-    public Color pieceColor;
     /**
      * The constructor for an abstract Chess Piece
      *  @param player   The player who controls this piece.
@@ -20,7 +19,6 @@ public class Rook extends Piece {
      */
     public Rook(Player player, int position) {
         super(player, position);
-        this.pieceColor = player.getColor();
     }
 
     @Override

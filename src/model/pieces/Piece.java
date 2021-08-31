@@ -13,6 +13,7 @@ public abstract class Piece {
 
     protected Player player;
     protected int position;
+    protected Color pieceColor;
 
     /**
      * The constructor for an abstract Chess Piece
@@ -21,6 +22,7 @@ public abstract class Piece {
     public Piece(Player player, int position) {
         this.player = player;
         this.position = position;
+        this.pieceColor = player.getColor();
     }
 
     /**

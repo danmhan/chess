@@ -15,7 +15,6 @@ public class Knight extends Piece {
 
     private final static int[] CANDIDATE_MOVE_COORDINATES = {-17, -15, -10, -6, 6, 10, 15, 17};
 
-    Color pieceColor;
     /**
      * The constructor for an abstract Chess Piece
      *
@@ -25,7 +24,6 @@ public class Knight extends Piece {
 
     public Knight(Player player, int position) {
         super(player, position);
-        this.pieceColor = player.getColor();
     }
 
     @Override
